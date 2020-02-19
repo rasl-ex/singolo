@@ -1,0 +1,122 @@
+/* FONTS */
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 300;
+    src: local('Lato Light'), local('Lato-Light'), url('./assets/lato-v16-latin-300.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 400;
+    src: local('Lato Regular'), local('Lato-Regular'), url('./assets/lato-v16-latin-regular.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    src: local('Lato Bold'), local('Lato-Bold'), url('./assets/lato-v16-latin-700.woff2') format('woff2');
+}
+
+@font-face {
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    src: local('Lato Black'), local('Lato-Black'), url('./assets/lato-v16-latin-900.woff2') format('woff2');
+}
+
+
+/*style*/
+
+body,
+html {
+    margin: 0 !important;
+    padding: 0 !important;
+}
+
+body {
+    font-family: 'Lato', sans-serif;
+    display: flex;
+    align-content: center;
+    width: 100%;
+    margin: 0px auto;
+    display: flex;
+    align-items: center;
+    align-content: center;
+}
+
+
+/*header*/
+
+.header {
+    display: flex;
+    width: auto;
+    height: 89px;
+    margin: auto;
+    background-color: #2d303a;
+    border-bottom: 6px solid #323746;
+}
+
+.text__logo {
+    display: flex;
+    position: relative;
+    font-size: 25px;
+    font-weight: 700;
+    float: left;
+    padding-left: 39px;
+    padding-top: 29px;
+    width: 510px;
+    height: 70px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+    letter-spacing: -0.5px;
+}
+
+.text__logo span {
+    color: #f06c64;
+}
+
+.logo_link {
+    text-decoration-line: none;
+    color: #ffffff;
+}
+
+.header__navigation {
+    display: flex;
+    padding-right: 40px;
+    padding-top: 22px;
+}
+
+.header_item {
+    display: inline;
+    color: #ffffff;
+    font-size: 12px;
+    letter-spacing: -0.05px
+}
+
+.header_link::before {
+    content: "·";
+    text-align: center;
+    padding-right: 12px;
+    padding-left: 12px;
+    color: white;
+    pointer-events: none;
+}
+
+ul>li:first-child .header_link::before {
+    content: "";
+    padding-left: 6px;
+    pointer-events: none;
+}
+
+.header_link {
+    text-decoration-line: none;
+    color: #ffffff;
+}
+
+.header_link:hover {
+    color: #f06c64;
+}
