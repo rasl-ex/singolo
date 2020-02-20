@@ -35,25 +35,19 @@ body,
 html {
     margin: 0 !important;
     padding: 0 !important;
-}
-
-body {
     font-family: 'Lato', sans-serif;
-    display: flex;
-    align-content: center;
-    width: 100%;
-    margin: 0px auto;
-    display: flex;
-    align-items: center;
-    align-content: center;
 }
-
 
 /*header*/
 
 .header {
     display: flex;
-    width: auto;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+}
+
+.header_wrapper {
     height: 89px;
     margin: auto;
     background-color: #2d303a;
@@ -61,7 +55,7 @@ body {
 }
 
 .text__logo {
-    display: flex;
+ 
     position: relative;
     font-size: 25px;
     font-weight: 700;
@@ -86,6 +80,8 @@ body {
 
 .header__navigation {
     display: flex;
+    width: auto;
+    margin-right: 0px;
     padding-right: 40px;
     padding-top: 22px;
 }
@@ -94,7 +90,7 @@ body {
     display: inline;
     color: #ffffff;
     font-size: 12px;
-    letter-spacing: -0.05px
+    letter-spacing: -0.05px;
 }
 
 .header_link::before {
@@ -104,6 +100,7 @@ body {
     padding-left: 12px;
     color: white;
     pointer-events: none;
+    opacity: 0.2;
 }
 
 ul>li:first-child .header_link::before {
@@ -119,4 +116,24 @@ ul>li:first-child .header_link::before {
 
 .header_link:hover {
     color: #f06c64;
+}
+
+/*main*/
+
+/*PHONE*/
+
+main,
+.main__wrapper {
+    height: 606px;
+    margin: auto;
+    width: 1020px;
+    position: inherit;
+    background-color: #f06c64;
+}
+
+.slider__arrow {
+    background-image: url(./assets/slider_arrow.svg);
+    color: aqua;
+    width: 100%;
+    height: 100%;
 }
