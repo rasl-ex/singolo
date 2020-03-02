@@ -88,7 +88,8 @@ html {
 }
 
 input,
-textarea {
+textarea,
+form button {
     box-sizing: border-box;
     padding-left: 14px;
     padding-top: 10px;
@@ -120,6 +121,21 @@ textarea {
 
 textarea::placeholder {
     letter-spacing: 0;
+}
+
+form button {
+    padding: 12px 14px 10px;
+    width: initial;
+    background-color: #d6564f;
+    color: #f0d8d9;
+    border: 1px solid #f48c8f;
+}
+
+form button:hover {
+    padding: 13px 15px 11px;
+    background-color: #f0d8d9;
+    color: #2d303a;
+    border: none;
 }
 
 .contact-form__info {
