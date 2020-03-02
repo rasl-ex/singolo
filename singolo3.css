@@ -89,6 +89,10 @@ html {
 
 input,
 textarea {
+    box-sizing: border-box;
+    padding-left: 14px;
+    padding-top: 10px;
+    padding-bottom: 12px;
     border-radius: 5px;
     background-color: #d6564f;
     border: none;
@@ -98,12 +102,11 @@ textarea {
 
 input {
     width: 619px;
-    height: 36px;
 }
 
 textarea {
-    width: 615px;
-    height: 198px;
+    width: 619px;
+    height: 202px;
     resize: none;
 }
 
@@ -112,13 +115,10 @@ textarea {
     opacity: 1;
     font-size: 12px;
     font-weight: 400;
-    padding-left: 15px;
     letter-spacing: 0.05px;
 }
 
 textarea::placeholder {
-    padding-left: 12px;
-    padding-top: 8px;
     letter-spacing: 0;
 }
 
