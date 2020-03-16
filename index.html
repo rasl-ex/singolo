@@ -188,13 +188,12 @@
                         <form method="POST">
                             <input type="text" name="name" placeholder="Name (Required)" required id="name">
                             <input type="email" name="email" placeholder="Email (Required)" required id="email">
-                            <input type="text" name="subject" placeholder="Subject" id="text">
-                            <textarea name="message" placeholder="Describe your project in detail..." id="message"></textarea>
+                            <input type="text" name="subject" placeholder="Subject" id="text" class="text">
+                            <textarea name="message" placeholder="Describe your project in detail..." id="message" class="message"></textarea>
                             <button type="button" formmethod="POST" id="submit">Submit</button>
                         </form>
                         <dialog>
-                            <h4>Письмо отправлено</h4>
-                            <button type="button" id="close">Ок</button>
+
                         </dialog>
                         <div class="contact-form__info">
                             <h2>Contact Information</h2>
@@ -219,7 +218,7 @@
             </div>
         </div>
     </footer>
-    <script src="script.js"></script>
 </body>
+<script src="script.js"></script>
 
 </html>

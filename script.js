@@ -128,61 +128,84 @@ PROJECT.addEventListener('click', (event) => {
 });
 
 //form
-let dialog = document.querySelector('dialog');
-const dialod1 = dialogContext(dialog);
+// let dialog = document.querySelector('dialog');
+// const dialod1 = dialogContext(dialog);
 
 
-SUBMIT.addEventListener('click', (event) => {
 
-    let text = document.getElementById('text').value;
-    let message = document.getElementById('message').value;
-
-    dialod1.setText(text);
-    dialod1.setMessage(message);
-    dialod1.open();
-    // let dialog = document.querySelector('dialog');
-
-
-    // if ((text.length === 0) && (message.length === 0)) {
-    //     alert("Письмо отправлено \n\rТема: Без темы \n\rОписание: Без описания");
-    // } else if (text.length === 0) {
-    //     alert("Письмо отправлено \n\rТема:  Без темы \n\rОписание: " + (message));
-    // } else if (message.length === 0) {
-    //     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: Без описания");
-    // } else {
-    //     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: " + (message));
-    // }
-
-    
-});
 
 // document.querySelector('#submit').onclick = function() {dialod1.open()};
-document.querySelector('#close').onclick = function() {dialod1.close()};
+// document.querySelector('#close').onclick = function() { dialod1.close() };
 
 /**
  * 
  * @param {HTMLDialogElement } dialogEl 
  */
-function dialogContext(dialogEl) {
-    let text = null;
-    let message = null;
+// function dialogContext(dialogEl) {
+//     let text = null;
+//     let message = null;
 
-    return {
-        text, 
-        setText: (newText) => { text = newText },
-        message, 
-        setMessage: (newMessage) => { message = newMessage },
-        open: () => {
-            debugger;
-            dialogEl.querySelector('#text').value = text;
-            dialogEl.querySelector('#message').value = message;
-            dialogEl.showModal();
-        },
-        close: () => {
-            dialogEl.close();
-        }
+//     return {
+//         text,
+//         setText: (newText) => { text = newText },
+//         message,
+//         setMessage: (newMessage) => { message = newMessage },
+//         open: () => {
+//             debugger;
+//             dialogEl.querySelector('text').value = text;
+//             dialogEl.querySelector('message').value = message;
+//             dialogEl.showModal();
+//         },
+//         close: () => {
+//             dialogEl.close();
+//         }
+//     }
+// }
+
+// SUBMIT.addEventListener('click', (event) => {
+
+let dialog = document.querySelector('dialog');
+
+document.querySelector('#submit').onclick = function() {
+    let text = document.getElementById('text').value;
+    let message = document.getElementById('message').value;
+
+    if ((text.length === 0) && (message.length === 0)) {
+        dialog.innerHTML = ("<div><div class='dialog_span'>Письмо отправлено </div><br><br>Тема: Без темы <br><br>Описание: Без описания</div>");
+        dialog.innerHTML += ('<button type="button" id="close">Ок</button>');
+    } else if (text.length === 0) {
+        dialog.innerHTML = ("<div>Письмо отправлено <br><br>Тема: Без темы <br><br>Описание: " + (message) + "</div>");
+        dialog.innerHTML += ('<button type="button" id="close">Ок</button>');
+    } else if (message.length === 0) {
+        dialog.innerHTML = ("<div>Письмо отправлено <br><br>Тема: " + (text) + "<br><br>Описание: Без описания</div>");
+        dialog.innerHTML += ('<button type="button" id="close">Ок</button>');
+    } else {
+        dialog.innerHTML = ("<div>Письмо отправлено <br><br>Тема: " + (text) + "<br><br>Описание: " + (message) + "</div>");
+        dialog.innerHTML += ('<button type="button" id="close">Ок</button>');
     }
+    dialog.showModal();
+
+    document.querySelector('#close').onclick = function() { dialog.close() };
 }
 
 
 
+
+// dialod1.setText(text);
+// dialod1.setMessage(message);
+// dialod1.open();
+// let dialog = document.querySelector('dialog');
+
+
+// if ((text.length === 0) && (message.length === 0)) {
+//     alert("Письмо отправлено \n\rТема: Без темы \n\rОписание: Без описания");
+// } else if (text.length === 0) {
+//     alert("Письмо отправлено \n\rТема:  Без темы \n\rОписание: " + (message));
+// } else if (message.length === 0) {
+//     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: Без описания");
+// } else {
+//     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: " + (message));
+// }
+
+
+// });
