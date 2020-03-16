@@ -186,12 +186,16 @@
                     <div class="form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat <span class="second_line">porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></div>
                     <div class="contact__form">
                         <form method="POST">
-                            <input type="text" name="name" placeholder="Name (Required)" required>
-                            <input type="email" name="email" placeholder="Email (Required)" required>
-                            <input type="text" name="subject" placeholder="Subject">
-                            <textarea name="message" placeholder="Describe your project in detail..."></textarea>
-                            <button type="submit" formmethod="POST">Submit</button>
+                            <input type="text" name="name" placeholder="Name (Required)" required id="name">
+                            <input type="email" name="email" placeholder="Email (Required)" required id="email">
+                            <input type="text" name="subject" placeholder="Subject" id="text">
+                            <textarea name="message" placeholder="Describe your project in detail..." id="message"></textarea>
+                            <button type="button" formmethod="POST" id="submit">Submit</button>
                         </form>
+                        <dialog>
+                            <h4>Письмо отправлено</h4>
+                            <button type="button" id="close">Ок</button>
+                        </dialog>
                         <div class="contact-form__info">
                             <h2>Contact Information</h2>
                             <div class="contact-form__text">Quisque hendrerit purus dapibus, ornare nibh vitae, viver&shy;ra nibh. Fusce vitae aliquam tellus. Proin sit amet volutpat libero. Nulla sed nunc et tortor luctus faucibus. Morbi at aliquet turpis, et consequat felis. </div>

@@ -6,6 +6,7 @@ const PHONE1 = document.getElementById('phone-vertical');
 const PHONE2 = document.getElementById('phone-horizontal');
 const LEFT_SCREEN = document.getElementById('left');
 const RIGHT_SCREEN = document.getElementById('right');
+const SUBMIT = document.getElementById('submit');
 
 // menu_pages
 
@@ -125,3 +126,63 @@ PROJECT.addEventListener('click', (event) => {
     PROJECT.querySelectorAll('img').forEach(el => el.classList.remove('projects_wrapper_active'));
     event.target.classList.add('projects_wrapper_active');
 });
+
+//form
+let dialog = document.querySelector('dialog');
+const dialod1 = dialogContext(dialog);
+
+
+SUBMIT.addEventListener('click', (event) => {
+
+    let text = document.getElementById('text').value;
+    let message = document.getElementById('message').value;
+
+    dialod1.setText(text);
+    dialod1.setMessage(message);
+    dialod1.open();
+    // let dialog = document.querySelector('dialog');
+
+
+    // if ((text.length === 0) && (message.length === 0)) {
+    //     alert("Письмо отправлено \n\rТема: Без темы \n\rОписание: Без описания");
+    // } else if (text.length === 0) {
+    //     alert("Письмо отправлено \n\rТема:  Без темы \n\rОписание: " + (message));
+    // } else if (message.length === 0) {
+    //     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: Без описания");
+    // } else {
+    //     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: " + (message));
+    // }
+
+    
+});
+
+// document.querySelector('#submit').onclick = function() {dialod1.open()};
+document.querySelector('#close').onclick = function() {dialod1.close()};
+
+/**
+ * 
+ * @param {HTMLDialogElement } dialogEl 
+ */
+function dialogContext(dialogEl) {
+    let text = null;
+    let message = null;
+
+    return {
+        text, 
+        setText: (newText) => { text = newText },
+        message, 
+        setMessage: (newMessage) => { message = newMessage },
+        open: () => {
+            debugger;
+            dialogEl.querySelector('#text').value = text;
+            dialogEl.querySelector('#message').value = message;
+            dialogEl.showModal();
+        },
+        close: () => {
+            dialogEl.close();
+        }
+    }
+}
+
+
+

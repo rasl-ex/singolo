@@ -732,6 +732,10 @@ form button:hover {
     cursor: pointer;
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
 .contact-form__info {
     margin-left: 21px;
     margin-top: -15px;
