@@ -13,21 +13,21 @@
         <div class="header_wrapper">
             <h1 class="text__logo"><a href="#" class="logo_link">SINGOLO<span>*</span></a></h1>
             <nav class="header__navigation">
-                <ul class="header_list">
+                <ul class="header_list" id="menu">
                     <li class="header_item">
-                        <a class="header_link" href="#">HOME</a>
+                        <a class="header_link active" href="#home">HOME</a>
                     </li>
                     <li class="header_item">
-                        <a class="header_link" href="#">SERVICES</a>
+                        <a class="header_link" href="#services">SERVICES</a>
                     </li>
                     <li class="header_item">
-                        <a class="header_link" href="#">PORTFOLIO</a>
+                        <a class="header_link" href="#portfolio">PORTFOLIO</a>
                     </li>
                     <li class="header_item">
-                        <a class="header_link" href="#">ABOUT</a>
+                        <a class="header_link" href="#about">ABOUT</a>
                     </li>
                     <li class="header_item">
-                        <a class="header_link" href="#">CONTACT</a>
+                        <a class="header_link" href="#contact">CONTACT</a>
                     </li>
                 </ul>
             </nav>
@@ -35,13 +35,20 @@
     </header>
     <main>
         <div class="main__wrapper">
-            <div class="slider__wrapper">
-                <div class="slider__arrow left"><img src="assets/arrow.svg" width="100" height="27" alt="arrow-left" /></div>
-                <div class="slider__phone-vertical"></div>
-                <div class="slider__phone-horizontal"></div>
-                <div class="slider__arrow right"><img src="assets/arrow.svg" width="100" height="27" alt="arrow-right" /></div>
+            <div class="slider__wrapper" id="home">
+                <div class="slider__arrow left" id="left"><img src="assets/arrow.svg" width="100" height="27" alt="arrow-left" /></div>
+                <!-- <div id="slider"> -->
+                <!-- <div class="slide first_active"> -->
+                <div class="slider__phone-vertical" id="phone-vertical"></div>
+                <div class="slider__phone-horizontal" id="phone-horizontal"></div>
+                <!-- </div> -->
+                <!-- <div class="slide">
+                        <div class="slide-2"></div>
+                    </div> -->
+                <!-- </div> -->
+                <div class="slider__arrow right" id="right"><img src="assets/arrow.svg" width="100" height="27" alt="arrow-right" /></div>
             </div>
-            <div class="services">
+            <div class="services" id="services">
                 <div class="services__wrapper">
                     <div class="title__wrapper">
                         <h2 class="our__services-title">Our Services</h2>
@@ -103,28 +110,20 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio__wrapper">
+            <div class="portfolio__wrapper" id="portfolio">
                 <div class="portfolio__header">
                     <h2 class="portfolio__title">Portfolio</h2>
                     <div class="portfolio__text">Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</div>
-                    <div class="portfolio__filter">
-                        <div class="filter__button">
-                            <a href="#">All</a>
-                        </div>
-                        <div class="filter__button">
-                            <a href="#">Web Design</a>
-                        </div>
-                        <div class="filter__button">
-                            <a href="#">Graphic Design</a>
-                        </div>
-                        <div class="filter__button">
-                            <a href="#">Artwork</a>
-                        </div>
+                    <div class="portfolio__filter" id="portfolio__filter">
+                        <button class="filter__button portfolio_filter_active">All</button>
+                        <button class="filter__button">Web Design</button>
+                        <button class="filter__button">Graphic Design</button>
+                        <button class="filter__button">Artwork</button>
                     </div>
                 </div>
                 <div class="portfolio__separator"></div>
                 <div class="projects">
-                    <div class="projects__wrapper">
+                    <div class="projects__wrapper" id="projects__wrapper">
                         <div class="crop_project"><img src="assets/1.jpg" alt="img1" /></div>
                         <div class="crop_project"><img src="assets/2.jpg" alt="img2" /></div>
                         <div class="crop_project"><img src="assets/3.jpg" alt="img3" /></div>
@@ -140,7 +139,7 @@
                     </div>
                 </div>
             </div>
-            <div class="about-us__wrapper">
+            <div class="about-us__wrapper" id="about">
                 <div class="about-us">
                     <h2 class="about-us_title">About Us</h2>
                     <div class="about-us_text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo <span class="second_line">luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></div>
@@ -181,7 +180,7 @@
                     </div>
                 </div>
             </div>
-            <div class="form__wrapper">
+            <div class="form__wrapper" id="contact">
                 <div class="form__section">
                     <h2 class="form__title">Get a Quote</h2>
                     <div class="form__text">Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum. Duis mollis, non commodo luctus, nisi erat <span class="second_line">porttitor ligula, eget lacinia odio sem nec elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh.</span></div>
@@ -216,6 +215,7 @@
             </div>
         </div>
     </footer>
+    <script src="script.js"></script>
 </body>
 
 </html>
