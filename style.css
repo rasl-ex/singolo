@@ -223,13 +223,35 @@ main {
 }
 
 
-/* .slide-2 {
-    display: flex;
-    background-image: url(./assets/Slide-2.png);
-    width: 940px;
-    height: 600px;
-} */
+/*  */
 
+.slider {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* width: 792px; */
+}
+
+.slide {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    /* width: 792px; */
+}
+
+.slide.first_active {
+    display: flex;
+    /* width: 792px; */
+}
+
+.slide2 {
+    display: none;
+    background-image: url(./assets/Slide-2.png);
+}
+
+/*  */
 
 /*SERVICES*/
 
