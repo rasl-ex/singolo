@@ -127,43 +127,6 @@ PROJECT.addEventListener('click', (event) => {
     event.target.classList.add('projects_wrapper_active');
 });
 
-//form
-// let dialog = document.querySelector('dialog');
-// const dialod1 = dialogContext(dialog);
-
-
-
-
-// document.querySelector('#submit').onclick = function() {dialod1.open()};
-// document.querySelector('#close').onclick = function() { dialod1.close() };
-
-/**
- * 
- * @param {HTMLDialogElement } dialogEl 
- */
-// function dialogContext(dialogEl) {
-//     let text = null;
-//     let message = null;
-
-//     return {
-//         text,
-//         setText: (newText) => { text = newText },
-//         message,
-//         setMessage: (newMessage) => { message = newMessage },
-//         open: () => {
-//             debugger;
-//             dialogEl.querySelector('text').value = text;
-//             dialogEl.querySelector('message').value = message;
-//             dialogEl.showModal();
-//         },
-//         close: () => {
-//             dialogEl.close();
-//         }
-//     }
-// }
-
-// SUBMIT.addEventListener('click', (event) => {
-
 let dialog = document.querySelector('dialog');
 
 document.querySelector('#submit').onclick = function() {
@@ -187,25 +150,3 @@ document.querySelector('#submit').onclick = function() {
 
     document.querySelector('#close').onclick = function() { dialog.close() };
 }
-
-
-
-
-// dialod1.setText(text);
-// dialod1.setMessage(message);
-// dialod1.open();
-// let dialog = document.querySelector('dialog');
-
-
-// if ((text.length === 0) && (message.length === 0)) {
-//     alert("Письмо отправлено \n\rТема: Без темы \n\rОписание: Без описания");
-// } else if (text.length === 0) {
-//     alert("Письмо отправлено \n\rТема:  Без темы \n\rОписание: " + (message));
-// } else if (message.length === 0) {
-//     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: Без описания");
-// } else {
-//     alert("Письмо отправлено \n\rТема: " + (text) + " \n\rОписание: " + (message));
-// }
-
-
-// });
